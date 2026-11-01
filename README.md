@@ -18,7 +18,8 @@ affiliates and subsidiaries.*
 > [Issues](../../issues).
 
 **Contents:** [Requirements](#requirements) · [Installation](#installation) ·
-[Features](#features) · [Settings and console commands](#settings-and-console-commands) ·
+[Screenshots](#screenshots) · [Features](#features) ·
+[Settings and console commands](#settings-and-console-commands) ·
 [Not included](#not-included) · [Troubleshooting](#troubleshooting) ·
 [Credits](#credits) · [Legal](#legal)
 
@@ -65,6 +66,16 @@ parameters on the command line.
 
 **Uninstalling:** remove `-rez NOLF-RETRO-WIDESCREEN.REZ` from the Launcher's
 command line and delete the file. No original game file is changed.
+
+## Screenshots
+
+| Main menu | Interface options |
+| --- | --- |
+| ![NOLF main menu with the widescreen menu layout](screenshots/main-menu.png) | ![Interface options for HUD scale and cinematic aspect ratio](screenshots/interface-options.png) |
+
+| Developer console | Widescreen gameplay |
+| --- | --- |
+| ![Developer console displayed over gameplay](screenshots/developer-console.png) | ![Widescreen gameplay with the HUD and framerate counter](screenshots/gameplay-hud.png) |
 
 ## Features
 
