@@ -8,6 +8,8 @@ menu and HUD, and a few quality-of-life features. It is built with Visual C++
 
 **Creator:** Alexander Schmidt, <alex-286@web.de>
 
+**Version:** 0.9 (first release)
+
 *This add-on is not made by or supported by Monolith Productions, or any of its
 affiliates and subsidiaries.*
 
