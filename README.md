@@ -43,25 +43,28 @@ any time.
 
 1. Download `NOLF-RETRO-WIDESCREEN.REZ` from the latest
    [release](../../releases).
-2. Copy it into your NOLF game folder, or into a `Custom` subfolder, for
-   example `C:\Games\NOLF\Custom\NOLF-RETRO-WIDESCREEN.REZ`.
-3. Start the NOLF Launcher and click **Customize**. Select
-   `NOLF-RETRO-WIDESCREEN.REZ`, click **Add**, enable **Always load these rez
-   files**, and click **OK**.
-4. Launch the game. The opening screen shows
+2. Copy it into your NOLF game folder, the one that contains `NOLF.exe`, for
+   example `C:\Games\NOLF\NOLF-RETRO-WIDESCREEN.REZ`.
+3. Start the NOLF Launcher and click **Advanced...**. Add the following to
+   the end of the **Command line** field and keep the entries that are already
+   there:
+
+   ```text
+   -rez NOLF-RETRO-WIDESCREEN.REZ
+   ```
+
+   Enable **Always specify these command line parameters** and click **OK**.
+4. Click **Start**. The opening screen shows
    *NOLF Retro Widescreen Patch v0.9* when the patch is loaded.
 5. In the game, choose a widescreen resolution under **Options → Display**.
 
-Alternatively, start the game from a command line without using the Launcher:
-
-```text
-NOLF.exe -rez Custom\NOLF-RETRO-WIDESCREEN.REZ
-```
+If you start `NOLF.exe` yourself instead of using the Launcher, pass the same
+parameters on the command line.
 
 **Updating:** replace the file with the newer version.
 
-**Uninstalling:** remove the file from the Launcher's **Customize** list, or
-delete it. No original game file is changed.
+**Uninstalling:** remove `-rez NOLF-RETRO-WIDESCREEN.REZ` from the Launcher's
+command line and delete the file. No original game file is changed.
 
 ## Features
 
@@ -146,9 +149,10 @@ part of it:
 ## Troubleshooting
 
 - **No widescreen resolutions or no version on the opening screen:** the rez
-  file is not loaded. Check that `NOLF-RETRO-WIDESCREEN.REZ` is listed in the
-  Launcher's **Customize** dialog with **Always load these rez files**
-  enabled, or start the game with the `-rez` command line above.
+  file is not loaded. Open the Launcher's **Advanced...** dialog and check
+  that the **Command line** contains `-rez NOLF-RETRO-WIDESCREEN.REZ`, that
+  the file name matches the file in the game folder, and that **Always
+  specify these command line parameters** is enabled.
 - **Debug log:** the patch writes `RetroDebug.log` into the game's working
   directory, and the file is overwritten on every launch. Please attach it to
   bug reports, together with your Windows version and resolution.
