@@ -8,7 +8,7 @@ NOLF source code is not public domain and is therefore not published here.
 
 ## What you may do with the patch
 
-The widescreen patch (the `NOLF-Win98-Widescreen.rez` file with `CShell.dll`
+The widescreen patch (the `NOLF-RETRO-WIDESCREEN.REZ` file with `CShell.dll`
 and `CRes.dll`) is a free *Variation* in the sense of EULA section 8(c). On
 those terms, and only on those terms, the author permits you to use it and to
 pass it on to other end-users **free of charge**, provided that:
