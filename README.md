@@ -1,10 +1,12 @@
-# NOLF Retro Widescreen Patch
+# NOLF Retro Modernizer
 
-A free widescreen patch for **No One Lives Forever** (NOLF 1, version 1.003)
-that runs on legacy systems such as **Windows 98 SE and Windows XP**, and also
-on modern Windows. It adds widescreen resolutions such as 1920x1080, a scaled
-menu and HUD, and a few quality-of-life features. It is built with Visual C++
-2005, so no modern runtime is needed.
+A free modernization patch for **No One Lives Forever** (NOLF) that runs on
+legacy systems such as **Windows 98 SE and Windows XP**. On modern Windows,
+the [NOLF Modernizer](https://github.com/haekb/nolf1-modernizer) is the better
+choice.
+
+The patch adds widescreen resolutions, a scaled menu and HUD, and new features
+such as a console.
 
 **Creator:** Alexander Schmidt, <alex-286@web.de>
 
@@ -32,31 +34,32 @@ source. See [LICENSE.md](LICENSE.md).
 
 ## Requirements
 
-- A licensed copy of No One Lives Forever, patched to version 1.003. The patch
-  contains no game assets and does not replace the game.
+- A licensed copy of No One Lives Forever 1, patched to version 1.003. The
+  patch contains no game assets and does not replace the game.
 - Windows 98 SE, Windows XP, or newer (tested on Windows 98 SE, XP and 10/11).
+- The patch may also work with version 1.004, but this is untested.
 
 ## Installation
 
-The patch is a single file, `NOLF-RETRO-WIDESCREEN.REZ`. The original
+The patch is a single file, `NOLF-RETRO-MODERNIZER.REZ`. The original
 `NOLF.REZ` and `NOLF2.REZ` are never modified, so you can remove the patch at
 any time.
 
-1. Download `NOLF-RETRO-WIDESCREEN.REZ` from the latest
+1. Download `NOLF-RETRO-MODERNIZER.REZ` from the latest
    [release](../../releases).
 2. Copy it into your NOLF game folder, the one that contains `NOLF.exe`, for
-   example `C:\Games\NOLF\NOLF-RETRO-WIDESCREEN.REZ`.
+   example `C:\Games\NOLF\NOLF-RETRO-MODERNIZER.REZ`.
 3. Start the NOLF Launcher and click **Advanced...**. Add the following to
    the end of the **Command line** field and keep the entries that are already
    there:
 
    ```text
-   -rez NOLF-RETRO-WIDESCREEN.REZ
+   -rez NOLF-RETRO-MODERNIZER.REZ
    ```
 
    Enable **Always specify these command line parameters** and click **OK**.
 4. Click **Start**. The opening screen shows
-   *NOLF Retro Widescreen Patch v0.9* when the patch is loaded.
+   *NOLF Retro Modernizer v0.9* when the patch is loaded.
 5. In the game, choose a widescreen resolution under **Options → Display**.
 
 If you start `NOLF.exe` yourself instead of using the Launcher, pass the same
@@ -64,7 +67,7 @@ parameters on the command line.
 
 **Updating:** replace the file with the newer version.
 
-**Uninstalling:** remove `-rez NOLF-RETRO-WIDESCREEN.REZ` from the Launcher's
+**Uninstalling:** remove `-rez NOLF-RETRO-MODERNIZER.REZ` from the Launcher's
 command line and delete the file. No original game file is changed.
 
 ## Screenshots
@@ -73,9 +76,9 @@ command line and delete the file. No original game file is changed.
 | --- | --- |
 | ![NOLF main menu with the widescreen menu layout](screenshots/main-menu.png) | ![Interface options for HUD scale and cinematic aspect ratio](screenshots/interface-options.png) |
 
-| Developer console | Widescreen gameplay |
+| Console | Widescreen gameplay |
 | --- | --- |
-| ![Developer console displayed over gameplay](screenshots/developer-console.png) | ![Widescreen gameplay with the HUD and framerate counter](screenshots/gameplay-hud.png) |
+| ![Console displayed over gameplay](screenshots/console.png) | ![Widescreen gameplay with the HUD and framerate counter](screenshots/gameplay-hud.png) |
 
 ## Features
 
@@ -97,27 +100,13 @@ command line and delete the file. No original game file is changed.
 | Interface options | Not present | New **Interface** folder with a HUD scale slider (`UIScale`) and a cinematic aspect ratio toggle (`RestrictCinematicsTo4x3`) |
 | Framerate cap | Uncapped | 60 fps in menus and gameplay (`FramerateLock`, default on; always on in multiplayer) |
 | FPS counter | Not present | Bottom-left "Framerate" display (`ShowFramerate`, default off) |
-| Developer console | Not present | Opens with **Shift+Esc**, or with a key you bind under *Customize Controls → Toggle Console*; backdrop selectable with `ConsoleBackdrop` |
-| Popup text (intelligence items) | Closed with Escape or the activate key | Can also be closed with the right mouse button |
+| Console | Not present | Opens with **Shift+Esc**, or with a key you bind under *Customize Controls → Toggle Console*; backdrop selectable with `ConsoleBackdrop` |
+| Popup text | Closed with Escape or the activate key | Can also be closed with the right mouse button |
 | Ammo selection | Always switches to the best ammo type | Remembers the last used ammo type per weapon (until the game is restarted) and falls back to the best ammo when it runs out |
-
-### Fixes
-
-- 3D weapon and item models are shown correctly in the widescreen folders.
-- The mission summary screen always shows the **Continue** button.
-- Using the Back arrow on the **Weapon Controls** screen no longer crashes the
-  game.
-
-### Compatibility
-
-- Game: No One Lives Forever 1, retail, patched to version 1.003.
-- Operating systems: Windows 98 SE, Windows XP, and Windows 10/11.
-- The patch is built with Visual C++ 2005 and needs no additional runtime,
-  DirectX update or other installation.
 
 ## Settings and console commands
 
-Enter these in the developer console, or set them in `autoexec.cfg`.
+Enter these in the console, or set them in `autoexec.cfg`.
 
 | Command | Type | Description | Default |
 | --- | --- | --- | --- |
@@ -130,7 +119,7 @@ Enter these in the developer console, or set them in `autoexec.cfg`.
 `RestrictCinematicsTo4x3` and `UIScale` are also available in the **Interface**
 options menu. `FramerateLock` is always active in multiplayer.
 
-### Developer console
+### Console
 
 - **Shift+Esc** opens the console; **Esc** closes it. To use a dedicated key,
   open **Customize Controls**, scroll to the last entry (**Toggle Console**)
@@ -161,7 +150,7 @@ part of it:
 
 - **No widescreen resolutions or no version on the opening screen:** the rez
   file is not loaded. Open the Launcher's **Advanced...** dialog and check
-  that the **Command line** contains `-rez NOLF-RETRO-WIDESCREEN.REZ`, that
+  that the **Command line** contains `-rez NOLF-RETRO-MODERNIZER.REZ`, that
   the file name matches the file in the game folder, and that **Always
   specify these command line parameters** is enabled.
 - **Debug log:** the patch writes `RetroDebug.log` into the game's working
@@ -173,7 +162,7 @@ part of it:
 Several features follow the behavior of the
 [NOLF Modernizer](https://github.com/haekb/nolf1-modernizer) by its authors,
 re-implemented for Visual C++ 2005 and legacy Windows: the framerate cap, FPS
-counter, developer console and the two screen fixes. The Shift+Esc console
+counter and console. The Shift+Esc console
 shortcut, right-click popup closing, per-weapon ammo memory and the scope
 borders for sunglasses zoom are taken from its
 [pull request #55](https://github.com/haekb/nolf1-modernizer/pull/55). NOLF
